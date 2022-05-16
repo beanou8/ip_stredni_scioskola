@@ -1,0 +1,1 @@
+# ip_stredni_scioskola
