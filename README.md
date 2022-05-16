@@ -1,1 +1,5 @@
-# ip_stredni_scioskola
+# Individuální projekt Střední ScioŠkola
+
+Obash
+
+Popis
