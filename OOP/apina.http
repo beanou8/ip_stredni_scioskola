@@ -1,0 +1,17 @@
+POST http://localhost:5000/signup/
+Content-Type: application/json
+
+{
+  "name": "Adam Novák",
+  "email": "vyserse@seznam.cz",
+  "password": "heslo987"
+}
+
+###
+GET http://localhost:5000/books/
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMzE5NTg3NywianRpIjoiOGQ3MDE0M2MtYjNhMC00YjU3LTk2YTgtMDczOWRhODNkNmZjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im9uZHJhLmJlbmlzZWtAc2V6bmFtLmN6IiwibmJmIjoxNjMzMTk1ODc3LCJleHAiOjE2MzMxOTY3Nzd9.K0-9kCnpbENooeN_IsuQ9I_eaB6OGjLUxX7x5gk1HY8
+
+###
+
+

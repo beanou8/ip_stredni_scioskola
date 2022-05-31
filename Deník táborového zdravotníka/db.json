@@ -1,0 +1,1 @@
+{"patients": {"1": {"id": 0, "name": "Ond\u0159ej Ben\u00ed\u0161ek", "dob": "2003-07-27", "problems": [{"id": 0, "problem": "Ahoj", "appointments": []}, {"id": 1, "problem": "Bolest b\u0159icha", "appointments": []}]}, "2": {"id": 1, "name": "Anna Nov\u00e1kov\u00e1", "dob": "2012-12-16", "problems": [{"id": 0, "problem": "\u00daraz hlavy", "appointments": []}]}}}

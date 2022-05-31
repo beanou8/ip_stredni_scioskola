@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Navigation */
+nav {
+    background: white;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+nav a:hover, nav a:active {
+    color: darkslategray;
+    border-bottom: 1px solid darkslategray;
+}
+
+/* Main */
+main {
+    background: url("../img/background.png");
+    height: 100vh;
+    padding-top: 3rem;
+}
+
+/* Block */
+.block {
+    text-align: center;
+}
+
+.block img {
+    height: 20rem;
+    width: 20rem;
+}
+
+.block a {
+    text-decoration: none;
+    color: black;
+}
+
+.block a:hover h2, .block a:active h2 {
+    text-decoration: underline;
+}
+
+.block a:hover img, .block a:active img {
+    filter: brightness(80%);
+}
+
+.block h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+/* Responsiveness */
+@media only screen and (min-width: 40rem) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appka</title>
+</head>
+<body>
+        <main v-if="signedIn">
+            Ahoj! {{ email }}
+            <button>
+                Odhlásit!
+            </button>
+        </main>
+
+        <main v-else>
+            <label for="email">Email: </label>
+            <input type="text" id="email" v-model="email">
+
+            <label for="password">Heslo: </label>
+            <input type="password" id="password" v-model="password">
+
+            <button @click="signUp">
+                Registrovat!
+            </button>
+            <button @click="signIn">
+                Přiihlásit
+            </button>
+        </main>
+
+
+<!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js'
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.5/firebase-auth.js'
+  import { createApp } from 'https://unpkg.com/petite-vue?module'
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyAYeXoaNgG32E-rLr6BVA3UvFpPpFBJ8Rw",
+      authDomain: "login-vue-6463e.firebaseapp.com",
+      projectId: "login-vue-6463e",
+      storageBucket: "login-vue-6463e.appspot.com",
+      messagingSenderId: "276337029238",
+      appId: "1:276337029238:web:a8c3d7ee542bdece1c2f57"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  createApp({
+      email: '',
+      password: '',
+      signedIn: false,
+      name: '',
+      signUp() {
+          const auth = getAuth();
+          createUserWithEmailAndPassword(auth, this.email, this.password)
+              .then((userCredential) => {
+                  // Signed in
+                  const user = userCredential.user;
+                  console.log(user)
+              })
+              .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  // ..
+              });
+      },
+      signIn() {
+          const auth = getAuth();
+          signInWithEmailAndPassword(auth, this.email, this.password)
+              .then((userCredential) => {
+                  // Signed in
+                  const user = userCredential.user;
+                  this.email = user.email;
+                  this.signedIn = true;
+              })
+              .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+              });
+      }
+  }).mount()
+</script>
+</body>
+</html>

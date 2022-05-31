@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background: #F2F2F2;
+    font-family: 'Oxygen', sans-serif
+}
+
+.sidebar {
+    background: #3270A6;
+    width: 8%;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.sidebar li {
+    padding-top: 10px;
+}
+
+.btn {
+    background: #BBD8F2;
+    border: 1px solid #BBD8F2;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
