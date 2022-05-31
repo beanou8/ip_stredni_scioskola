@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bloq | Ondřej Beníšek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/article.css">
+</head>
+<body>
+<nav>
+    <svg viewBox="0 0 119 103" height="40" width="50">
+        <title>daverupert.com</title>
+        <polygon class="left" fill="#EE5D2D" points="0.275,101.789 65.287,45.593 60.988,0"></polygon>
+        <polygon class="right" fill="#D92B2E" points="118.558,102.032 100.161,44.142 61.001,0.153 65.3,45.277"></polygon>
+        <polygon class="bottom" fill="#F38E2E" points="0,102.076 118.518,102.076 65.3,45.277"></polygon>
+    </svg>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+        <header>
+            <h1>
+                My petite vue review
+            </h1>
+            <h3>
+                Road testing petite-vue with a simple category filter
+            </h3>
+            <p class="date">
+                July 21, 2021
+            </p>
+        </header>
+<article>
+    <p>
+        Petite-vue is a new cut of the Vue project specifically built with progressive enhancement in mind. At 5kb, petite-vue is a lightweight Alpine (or jQuery) alternative that can be “sprinkled” over your project requiring no extra bundling steps or build processes. Add a <code>script</code> tag, set a <code>v-scope</code>, and you’re off to the races. This is up my alley.
+    </p>
+    <p>
+        Since it came out, I’ve been looking for a quick project to road test petite-vue with, but I’m a bit buried under client work and starting a new company to dream up some new toy projects. This weekend I was updating my <a href="#">bookshelf</a> and realized petite-vue would be an ideal candidate for a feature I’ve wanted for awhile: <strong>Filter By Tags</strong> .
+    </p>
+
+    <h2>
+        Sprinkling in petite-vue
+    </h2>
+
+    <p>
+        Some background: My site is a statically generated Jekyll site with 790 bytes of first-party JavaScript. All the data that powers my bookshelf lives in a giant YAML file in <code>_data/books.yml</code>. This system has become less sustainable now that there are 200+ books on the bookshelf but that’s a project for another day. If you want a gist of how I built my bookshelf, <a href="">here’s the gist of how I built my bookshelf</a>.
+    </p>
+</article>
+
+<footer>
+    <ul>
+        <li><a href="#">Home</a></li>
+        •
+        <li><a href="#">About</a></li>
+        •
+        <li><a href="#">Articles</a></li>
+        •
+        <li><a href="#">Likes</a></li>
+        •
+        <li><a href="#">Bookshelf</a></li>
+    </ul>
+    <ul>
+        <li>© 2022 Ondřej Beníšek</li>
+        •
+        <li><a href="#">Twitter</a></li>
+        •
+        <li><a href="#">GitHub</a></li>
+    </ul>
+</footer>
+</body>
+</html>

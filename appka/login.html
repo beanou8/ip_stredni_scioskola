@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+    <section class="welcome">
+        <h1>
+            Welcome page
+        </h1>
+        <p>
+            Sign in to continue access!
+        </p>
+    </section>
+
+    <section class="sign-in">
+        <h1>
+            Sign in
+        </h1>
+
+        <form>
+            <input class="text-input" type="text" placeholder="Email Address">
+            <input class="text-input" type="text" placeholder="Password">
+            <input type="submit" value="Continue">
+        </form>
+
+        <p>
+            or Connect with Social Media
+        </p>
+
+        <button>
+            Sign In With Twitter
+        </button>
+        <button>
+            Sign In With Facebook
+        </button>
+    </section>
+</main>
+</body>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        background: linear-gradient(45deg ,darkmagenta, pink);
+        height: 100vh;
+    }
+
+    main {
+        margin: 5rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 5px 5px 20px darkslategray;
+        display: flex;
+        overflow: hidden;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .welcome {
+        color: white;
+        background: linear-gradient(45deg ,darkblue, lightskyblue);
+        width: 50%;
+        box-shadow: 0 0 5px darkslategray;
+    }
+
+    .sign-in {
+        color: darkslategray;
+        margin-left: 2rem;
+    }
+
+    .text-input {
+        display: block;
+        box-sizing: unset;
+        border: none;
+        border-bottom: blue solid 2px;
+    }
+
+    .text-input:focus {
+        border: none;
+    }
+</style>
+
+</html>

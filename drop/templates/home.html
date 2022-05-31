@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Link Drop</title>
+</head>
+<body class="text-center bg-yellow-200">
+    
+    <nav class="bg-white py-2">
+        <h1 class="font-bold text-xl">
+            <a href="{{ url_for('home') }}">Link Drop</a>
+        </h1>
+    </nav>
+    
+    <form action = "{{ url_for('add') }}" method="POST" class="mt-2">
+        <input type="text" name="link" class="rounded p-1">
+        <input type="submit" value="Add" class="bg-white rounded p-1">
+    </form>
+
+    <ul>
+        {% if links %}
+        
+        {% for link in links %}
+        <li class="bg-gray-50 mt-2 mx-80 rounded">
+            <h2 class="font-semibold">
+                {{link.content}}
+            </h2>
+            <p class="inline-block text-right">
+                {{link.date}}
+                <a href="{{ url_for('disable') }}" class="bg-red-500 text-white rounded">Hide</a>
+                {{link.key_id}}
+            </p>
+        </li>
+        {% endfor %}
+
+        {% else %}
+
+        <h2 class="font-bold">
+            Nenašli jsme žádné linky :(
+        </h2>
+
+        {% endif %}
+    </ul>
+
+    <footer>
+        Made with ❤️ in cervenyknedlik.cz</a>
+    </footer>
+</body>
+</html>

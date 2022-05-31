@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vek</title>
+</head>
+<body>
+<form @submit.prevent="calculate" @change="calculate">
+    <h3>Den: (DD)</h3>
+    <input type="text" v-model="store.dd">
+
+    <h3>Měsíc: (MM)</h3>
+    <input type="text" v-model="store.mm">
+
+    <h3>Rok: (YYYY)</h3>
+    <input type="text" v-model="store.yyyy">
+</form>
+
+
+<p>
+    <strong>Datum narození: </strong> {{ store.dd }}. {{ store.mm }}. {{ store.yyyy }}
+</p>
+
+<p>
+    <strong>Věk: {{ age }}</strong>
+</p>
+
+<p>
+    Year: TodayYYYY - YYYY = ageY<br>
+    Months: If (MM <= TodayMM) {
+        TodayMM - MM = ageM
+    } else: {
+        
+    }
+</p>
+
+
+<script type="module">
+  import { createApp,reactive } from 'https://unpkg.com/petite-vue?module'
+
+  // Store
+  const store = reactive({
+    dd: '',
+    mm: '',
+    yyyy: ''
+  })
+
+  createApp({
+      store,
+      age: '',
+      calculate() {
+          let today = new Date();
+          console.log(today.getDate())
+          var dd = String(today.getDate()).padStart(2, '0');
+          var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+          var yyyy = today.getFullYear();
+      }
+  }).mount()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <title>Appka</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/app.js" type="module"></script>
+</head>
+<body>
+<h1>
+    {{store.count}}
+</h1>
+<button @click="addOne">
+    Plus 1
+</button>
+</body>
+</html>
